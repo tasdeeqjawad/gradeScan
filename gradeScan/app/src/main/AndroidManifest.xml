@@ -1,6 +1,6 @@
 <!-- app/src/main/AndroidManifest.xml -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.docscanner">
+    package="com.example.gradeScan">
 
     <application
         android:allowBackup="true"
@@ -18,19 +18,19 @@
             </intent-filter>
         </activity>
 
-        <!-- Define other activities here -->
+        <!-- Other Activities -->
         <activity android:name=".activities.DashboardActivity" />
         <activity android:name=".activities.ImageSourceActivity" />
         <activity android:name=".activities.ImageSelectionActivity" />
         <activity android:name=".activities.CameraCaptureActivity" />
         <activity android:name=".activities.ImagePreviewActivity" />
         <activity android:name=".activities.ScannedImageDisplayActivity" />
-
-        <!-- Permissions -->
-        <uses-permission android:name="android.permission.CAMERA"/>
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+        
     </application>
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 </manifest>

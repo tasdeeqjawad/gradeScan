@@ -1,14 +1,22 @@
 <!-- res/layout/activity_camera_capture.xml -->
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Camera preview surface with A4 overlay boundaries -->
     <SurfaceView
         android:id="@+id/surfaceViewCamera"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
+    <!-- Overlay for A4 document alignment -->
+    <ImageView
+        android:id="@+id/ivOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/a4_overlay" />
+
+    <!-- Capture and navigation buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,16 +28,16 @@
         <Button
             android:id="@+id/btnCapture"
             style="@style/Button3DStyle"
-            android:text="@string/capture"/>
+            android:text="@string/capture" />
 
         <Button
             android:id="@+id/btnDone"
             style="@style/Button3DStyle"
-            android:text="@string/done"/>
+            android:text="@string/done" />
 
         <Button
             android:id="@+id/btnKeepScanning"
             style="@style/Button3DStyle"
-            android:text="@string/keep_scanning"/>
+            android:text="@string/keep_scanning" />
     </LinearLayout>
 </FrameLayout>
