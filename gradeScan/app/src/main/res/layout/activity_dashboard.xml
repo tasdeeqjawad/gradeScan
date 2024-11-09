@@ -1,0 +1,28 @@
+<!-- res/layout/activity_dashboard.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MainBodyStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/dashboard_title"
+        style="@style/TopBarStyle"/>
+
+    <RecyclerView
+        android:id="@+id/rvScans"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnNewScan"/>
+
+    <Button
+        android:id="@+id/btnNewScan"
+        style="@style/Button3DStyle"
+        android:text="@string/scan_new_document"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

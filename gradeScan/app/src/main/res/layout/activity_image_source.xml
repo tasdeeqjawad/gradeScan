@@ -1,0 +1,25 @@
+<!-- res/layout/activity_image_source.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MainBodyStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/image_source_title"
+        style="@style/TopBarStyle"/>
+
+    <Button
+        android:id="@+id/btnUpload"
+        style="@style/Button3DStyle"
+        android:text="@string/upload_from_device"/>
+
+    <Button
+        android:id="@+id/btnCapture"
+        style="@style/Button3DStyle"
+        android:text="@string/capture_using_camera"/>
+</LinearLayout>

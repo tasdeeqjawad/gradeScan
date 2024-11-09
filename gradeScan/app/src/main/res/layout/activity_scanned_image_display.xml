@@ -1,0 +1,32 @@
+<!-- res/layout/activity_scanned_image_display.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MainBodyStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/scanned_image_display_title"
+        style="@style/TopBarStyle"/>
+
+    <ImageView
+        android:id="@+id/imgScannedDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"/>
+
+    <Button
+        android:id="@+id/btnExtractText"
+        style="@style/Button3DStyle"
+        android:text="@string/extract_text"/>
+
+    <Button
+        android:id="@+id/btnSaveImage"
+        style="@style/Button3DStyle"
+        android:text="@string/save_image"/>
+</LinearLayout>

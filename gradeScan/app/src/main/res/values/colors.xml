@@ -1,0 +1,10 @@
+<!-- res/values/colors.xml -->
+<resources>
+    <color name="colorPrimary">#007AFF</color> <!-- Blue for top bar -->
+    <color name="colorPrimaryDark">#005BBB</color> <!-- Darker blue for status bar -->
+    <color name="colorAccent">#FFFFFF</color> <!-- White color for text -->
+    <color name="backgroundWhite">#FFFFFF</color> <!-- White background -->
+    <color name="buttonBlue">#007AFF</color> <!-- Blue for 3D buttons -->
+    <color name="buttonTextWhite">#FFFFFF</color> <!-- White text on buttons -->
+    <color name="buttonShadow">#005BBB</color> <!-- Darker shadow for 3D effect -->
+</resources>

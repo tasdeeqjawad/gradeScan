@@ -1,0 +1,26 @@
+<!-- res/layout/activity_image_selection.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MainBodyStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/image_selection_title"
+        style="@style/TopBarStyle"/>
+
+    <RecyclerView
+        android:id="@+id/rvGalleryImages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnConfirmSelection"
+        style="@style/Button3DStyle"
+        android:text="@string/confirm_selection"/>
+</LinearLayout>
