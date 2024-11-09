@@ -1,25 +1,48 @@
-<!-- res/layout/activity_image_source.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MainBodyStyle"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <!-- Blue Top Bar with Title -->
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/image_source_title"
-        style="@style/TopBarStyle"/>
+        android:background="#3F51B5"
+        android:padding="16dp"
+        android:text="Image Source"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnUpload"
-        style="@style/Button3DStyle"
-        android:text="@string/upload_from_device"/>
+    <!-- Buttons for Image Source Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/btnCapture"
-        style="@style/Button3DStyle"
-        android:text="@string/capture_using_camera"/>
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:background="@drawable/button_background"
+            android:text="Upload from Gallery"
+            android:textColor="@android:color/white"
+            android:elevation="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:text="Capture Using Camera"
+            android:textColor="@android:color/white"
+            android:elevation="8dp"/>
+    </LinearLayout>
 </LinearLayout>

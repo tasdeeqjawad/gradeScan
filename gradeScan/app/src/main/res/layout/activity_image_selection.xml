@@ -1,26 +1,42 @@
-<!-- res/layout/activity_image_selection.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MainBodyStyle"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <!-- Blue Top Bar with Title -->
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/image_selection_title"
-        style="@style/TopBarStyle"/>
+        android:background="#3F51B5"
+        android:padding="16dp"
+        android:text="Select Images"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold" />
 
-    <RecyclerView
-        android:id="@+id/rvGalleryImages"
+    <!-- RecyclerView for Selected Images -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSelectedImages"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:padding="8dp" />
 
+    <!-- Confirm Button -->
     <Button
         android:id="@+id/btnConfirmSelection"
-        style="@style/Button3DStyle"
-        android:text="@string/confirm_selection"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF9800"
+        android:background="@drawable/button_background"
+        android:text="Confirm Selection"
+        android:textColor="@android:color/white"
+        android:elevation="8dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
 </LinearLayout>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Transparent Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" /> <!-- Fully transparent background -->
+        </shape>
+    </item>
+
+    <!-- A4 Border Overlay -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="4dp"
+                android:color="#3F51B5" /> <!-- Blue border matching the top bar color -->
+            <padding
+                android:left="16dp"
+                android:right="16dp"
+                android:top="24dp"
+                android:bottom="24dp" />
+        </shape>
+    </item>
+</layer-list>

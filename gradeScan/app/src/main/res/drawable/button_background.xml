@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed State -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#F57C00" /> <!-- Darker shade of orange when pressed -->
+            <corners android:radius="8dp" /> <!-- Rounded corners -->
+            <padding android:bottom="2dp" /> <!-- Slight padding for a pressed effect -->
+            <elevation android:elevation="4dp" />
+        </shape>
+    </item>
+
+    <!-- Default State -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF9800" /> <!-- Default orange color -->
+            <corners android:radius="8dp" /> <!-- Rounded corners for a smooth effect -->
+            <elevation android:elevation="8dp" /> <!-- 3D effect with elevation -->
+        </shape>
+    </item>
+</selector>

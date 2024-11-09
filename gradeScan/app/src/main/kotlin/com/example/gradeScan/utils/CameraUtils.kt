@@ -1,31 +1,32 @@
-// java/com/example/docscanner/utils/CameraUtils.kt
-package com.example.docscanner.utils
+package com.example.gradeScan.utils
 
 import android.content.Context
-import android.content.Intent
 import android.net.Uri
-import android.os.Environment
 import androidx.core.content.FileProvider
 import java.io.File
+import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
 object CameraUtils {
-
-    fun getCameraIntent(context: Context): Intent {
-        val intent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
-        val photoFile = createImageFile(context)
-        val photoURI: Uri = FileProvider.getUriForFile(
-            context, "${context.packageName}.provider", photoFile
-        )
-        intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, photoURI)
-        return intent
+    // Creates a temporary image file for storing the captured photo
+    fun createImageFile(context: Context): File? {
+        val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date())
+        val storageDir: File? = context.getExternalFilesDir(null)
+        return try {
+            File.createTempFile("JPEG_${timeStamp}_", ".jpg", storageDir)
+        } catch (ex: IOException) {
+            null
+        }
     }
 
-    private fun createImageFile(context: Context): File {
-        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date())
-        val storageDir: File? = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-        return File.createTempFile("JPEG_${timeStamp}_", ".jpg", storageDir)
+    // Returns a URI for the specified file, required for camera intent
+    fun getUriForFile(context: Context, file: File): Uri {
+        return FileProvider.getUriForFile(
+            context,
+            "${context.packageName}.provider",
+            file
+        )
     }
 }

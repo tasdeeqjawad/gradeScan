@@ -1,23 +1,27 @@
-<!-- res/values/strings.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Document Scanner</string>
-    <string name="login_title">Login</string>
-    <string name="dashboard_title">My Scans</string>
-    <string name="image_source_title">Choose Image Source</string>
-    <string name="image_selection_title">Select Images</string>
-    <string name="camera_capture_title">Capture</string>
-    <string name="image_preview_title">Preview</string>
-    <string name="scanned_image_display_title">Scanned Image</string>
+    <!-- App Name -->
+    <string name="app_name">GradeScan</string>
+
+    <!-- Screen Titles -->
+    <string name="title_login">Login</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_image_source">Image Source</string>
+    <string name="title_image_selection">Select Images</string>
+    <string name="title_camera_capture">Camera Capture</string>
+    <string name="title_image_preview">Image Preview</string>
+    <string name="title_scanned_image_display">Scanned Image</string>
 
     <!-- Button Texts -->
-    <string name="login">Login</string>
-    <string name="sign_in_with_google">Sign in with Google</string>
-    <string name="upload_from_device">Upload from Device</string>
-    <string name="capture_using_camera">Capture Using Camera</string>
-    <string name="confirm_selection">Confirm Selection</string>
-    <string name="done">Done</string>
-    <string name="keep_scanning">Keep Scanning</string>
-    <string name="confirm">Confirm</string>
-    <string name="extract_text">Extract Text</string>
-    <string name="save_image">Save Image</string>
+    <string name="btn_sign_in_google">Sign in with Google</string>
+    <string name="btn_new_scan">Scan New Document</string>
+    <string name="btn_upload_gallery">Upload from Gallery</string>
+    <string name="btn_capture_camera">Capture Using Camera</string>
+    <string name="btn_confirm_selection">Confirm Selection</string>
+    <string name="btn_keep_scanning">Keep Scanning</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_extract_text">Extract Text (OCR)</string>
+    <string name="btn_save_image">Save Image</string>
+    <string name="btn_capture">Capture</string>
 </resources>

@@ -1,24 +1,16 @@
-// java/com/example/docscanner/utils/GalleryUtils.kt
-package com.example.docscanner.utils
+package com.example.gradeScan.utils
 
-import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.provider.MediaStore
 
 object GalleryUtils {
-
-    fun getGalleryIntent(): Intent {
-        return Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-    }
-
-    fun getImagePathFromUri(context: Context, uri: Uri): String? {
-        val projection = arrayOf(MediaStore.Images.Media.DATA)
-        val cursor = context.contentResolver.query(uri, projection, null, null, null)
-        cursor?.moveToFirst()
-        val columnIndex = cursor?.getColumnIndex(projection[0])
-        val filePath = columnIndex?.let { cursor.getString(it) }
-        cursor?.close()
-        return filePath
+    // Creates an intent to open the gallery for multi-image selection
+    fun createGalleryIntent(): Intent {
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        intent.addCategory(Intent.CATEGORY_OPENABLE)
+        intent.type = "image/*"
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+        return intent
     }
 }
+

@@ -1,32 +1,58 @@
-<!-- res/layout/activity_scanned_image_display.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MainBodyStyle"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <!-- Blue Top Bar with Title -->
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/scanned_image_display_title"
-        style="@style/TopBarStyle"/>
+        android:background="#3F51B5"
+        android:padding="16dp"
+        android:text="Scanned Image"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/imgScannedDisplay"
+    <!-- RecyclerView for Displaying Processed Images -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvScannedImages"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scaleType="fitCenter"/>
+        android:padding="8dp" />
 
-    <Button
-        android:id="@+id/btnExtractText"
-        style="@style/Button3DStyle"
-        android:text="@string/extract_text"/>
+    <!-- Bottom Button Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
 
-    <Button
-        android:id="@+id/btnSaveImage"
-        style="@style/Button3DStyle"
-        android:text="@string/save_image"/>
+        <Button
+            android:id="@+id/btnExtractText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:background="@drawable/button_background"
+            android:text="Extract Text (OCR)"
+            android:textColor="@android:color/white"
+            android:elevation="8dp"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/btnSaveImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:background="@drawable/button_background"
+            android:text="Save Image"
+            android:textColor="@android:color/white"
+            android:elevation="8dp"/>
+    </LinearLayout>
 </LinearLayout>
